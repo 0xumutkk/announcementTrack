@@ -108,8 +108,7 @@ def main():
         telegram(msg)
     print(f"{len(items)} duyuru tarandı, {len(new)} bildirim gönderildi.")
     if os.environ.get("HEARTBEAT") == "1" and not new:
-        telegram(f"✅ Takip çalışıyor: {len(items)} duyuru tarandı, yeni staj ilanı yok.")
-
+        telegram(f"✅ Takip çalışıyor: {len(items)} duyuru tarandı, yeni Erasmus+ staj ilanı yok.")
     json.dump(sorted(seen), open(STATE_FILE, "w"), ensure_ascii=False, indent=1)
 
 
