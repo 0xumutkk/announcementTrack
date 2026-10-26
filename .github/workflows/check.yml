@@ -2,7 +2,7 @@ name: ESTU staj ilani takibi
 
 on:
   schedule:
-    - cron: "33 5 * * *"   # her gün 08:33 (TR)
+    - cron: "17 * * * *"   # saatte bir: /kontrol komutu + günlük tarama
   workflow_dispatch:
     inputs:
       heartbeat:
@@ -31,6 +31,6 @@ jobs:
         run: |
           git config user.name "staj-bot"
           git config user.email "staj-bot@users.noreply.github.com"
-          git add seen.json 2>/dev/null || true
-          git diff --cached --quiet || git commit -m "seen güncellendi"
+          git add state.json 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "durum güncellendi"
           git push || true
