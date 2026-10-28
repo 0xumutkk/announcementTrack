@@ -15,7 +15,7 @@ TOKEN = os.environ.get("TELEGRAM_TOKEN")
 CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 
 STAJ_RE = re.compile(r"staj", re.I)
-BASVURU_RE = re.compile(r"başvuru|basvuru|ilan", re.I)
+BASVURU_RE = re.compile(r"başvuru|basvuru|ilan|Erasmus|Hareketlilik", re.I)
 LISTE_RE = re.compile(r"asil|yedek|sıralı|sirali|liste|oryantasyon|hibelendirme", re.I)
 DIL_RE = re.compile(r"yabancı dil sınavı.*(nihai|sınav sonuçları)", re.I)
 
