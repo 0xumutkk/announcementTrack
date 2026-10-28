@@ -147,7 +147,7 @@ def main():
     if manuel or komut:
         tara(state, heartbeat=True)
     elif gunluk:
-        tara(state, heartbeat=False)
+        tara(state, heartbeat=True)
     else:
         print("Yapılacak bir şey yok.")
     if gunluk:
